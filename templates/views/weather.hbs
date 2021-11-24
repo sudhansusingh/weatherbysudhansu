@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headerlinks}}
+</head>
+
+<body>
+
+
+    {{>navbar}}
+
+    <!--MAIN HEADER-->
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="row">
+
+                    <div class="main_content">
+                        <form class="temp_form form-inline">
+                            <input type="text" id="citynameinput" placeholder="Enter your City" autocomplete="off">
+                            <button type="submit" value="search" class="btn btn-danger" id="submitbtn">Search</button>
+                        </form>
+                    </div>
+                    <div class="temp_info">
+                        <div class="dateday row">
+                            <div id="day" class="col">Day Here</div>
+                            <div id="date" class="col">Date</div>
+                        </div>
+                        <div class="infobox">
+                            <p><h1 id="citydisplayhere">CityName</h1></p>
+                            <p id="temp_type_image"> <i class="fas fa-cloud"></i> </p>
+                            <div id="data">
+                                <p>Tempreature: <span id="temp">0</span><sup>o</sup>C</p>
+                                <p>Minimum Tempreature : <span id="Min"> 0 </span><sup>o</sup>C</p>
+                                <p>Maximum Tempreature :<span id="Max"> 0 </span><sup>o</sup>C</p>
+                                <p>Feels like:<span id="feels_like"> 0 </span><sup>o</sup>C</p>
+                                <p>Humidity:<span id="humidity"></span>%</p>
+                                <p>Visibility:<span id="visibility"></span>km</p>
+                            
+                            </div>
+                        </div>
+                    </div>
+                    
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+
+    {{>footer}}
+
+
+
+
+
+    <script src="js/main.js"></script>
+
+    <script>
+        //display day  and date using date function
+
+        var dateobject = new Date();
+
+
+        //DISPLAY DAY
+        const day = document.getElementById("day");
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+        //console.log(weekday[d.getDay()]);
+        day.innerText = weekday[dateobject.getDay()];
+
+
+
+        //2.DISPLAY DATE AND MONTH YEAR
+        const date = document.getElementById("date");
+        
+        var currentdate = dateobject.getDate();
+        var month = new Array();
+        month[0] = "January";
+        month[1] = "February";
+        month[2] = "March";
+        month[3] = "April";
+        month[4] = "May";
+        month[5] = "June";
+        month[6] = "July";
+        month[7] = "August";
+        month[8] = "September";
+        month[9] = "October";
+        month[10] = "November";
+        month[11] = "December";
+
+        var m = dateobject.getMonth();
+
+        var months = month[m];
+
+        var year = dateobject.getFullYear();
+
+        const final = currentdate + " " + months + " " + year;
+        date.innerHTML = final;
+        //console.log(final);
+
+    </script>
+</body>
+
+</html>

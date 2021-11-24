@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {{>headerlinks}}
+</head>
+<body>
+ 
+{{>navbar}}
+<!--MAIN HEADER-->
+<div class="container-fluid main_header">
+    <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+                    <figure>
+                         <img src="images/error.jpg" class="errorimage w-100" alt="error occured">
+                    </figure>
+                    <p>
+                    <h1  class="errortext">Welcome to Sudhansu Page</h1>
+                    <h3 class="errortext">{{errorMsg}}</h3>
+                    </p>
+                     
+        </div>
+    </div>
+</div>
+<!--Footer-->
+{{>footer}}
+
+</body>
+
+</html>
