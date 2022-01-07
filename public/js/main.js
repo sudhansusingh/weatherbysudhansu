@@ -20,10 +20,10 @@ const getinfo = async (event) => {
     else {
         try {
             //alert("here");
-           // let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityval}&units=metric&appid=d5ab202e7fa81eb3deb114ccc74aabbd`;
+            let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityval}&units=metric&appid=d5ab202e7fa81eb3deb114ccc74aabbd`;
             //console.log(url);
-            //const response = await fetch(url);
-            const response= await fetch(`http://api.openweathermap.org/data/2.5/weather?q=goa&units=metric&appid=d5ab202e7fa81eb3deb114ccc74aabbd`);
+            const response = await fetch(url);
+            //const response= await fetch(`http://api.openweathermap.org/data/2.5/weather?q=goa&units=metric&appid=d5ab202e7fa81eb3deb114ccc74aabbd`);
             const data = await response.json().then(/*console.log("CONVERTED TO OBJECT")*/);
             //console.log(data);
             const arrayData= [data];
