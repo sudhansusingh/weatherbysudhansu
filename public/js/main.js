@@ -21,17 +21,17 @@ const getinfo = async (event) => {
         try {
             //alert("here");
             let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityval}&units=metric&appid=d5ab202e7fa81eb3deb114ccc74aabbd`;
-            console.log(url);
-            const response = await fetch(url).then(console.log("fetched"));
-            const data = await response.json().then(console.log("CONVERTED TO OBJECT"));
-            console.log(data);
+            //console.log(url);
+            const response = await fetch(url).then(/*console.log("fetched")*/);
+            const data = await response.json().then(/*console.log("CONVERTED TO OBJECT")*/);
+            //console.log(data);
             const arrayData= [data];
             temp.innerText = arrayData[0].main.temp;
             //temp_type_image.innerText= arrayData[0].weather[0].main;
 
             citydisplayhere.innerText=`${arrayData[0].name}, ${arrayData[0].sys.country}`
             const tempMood=arrayData[0].weather[0].main;
-            console.log(tempMood);
+            //console.log(tempMood);
             if(tempMood=="Clear")
             {
                 temp_type_image.innerHTML= "<i class='fas fa-sun fa-10x'> </i>";
