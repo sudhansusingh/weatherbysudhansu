@@ -9,10 +9,10 @@ const getinfo = async (event) => {
 
     // alert("hi");
 
-    var cityval = city.value;
+    let cityval = city.value;
     // alert(cityval);
 
-    if (cityval === "") {
+    if (cityval ==="") {
         alert("Please Enter Valid City");
         citydisplayhere.innerText = "YOUR CITY NAME HERE";
     }
