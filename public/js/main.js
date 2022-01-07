@@ -29,31 +29,31 @@ const getinfo = async (event) => {
             temp.innerText = arrayData[0].main.temp;
             //temp_type_image.innerText= arrayData[0].weather[0].main;
 
-            citydisplayhere.innerText=`${arrayData[0].name}, ${arrayData[0].sys.country}`;
-            const tempMood=arrayData[0].weather[0].main;
-            //console.log(tempMood);
-            if(tempMood=="Clear")
-            {
-                temp_type_image.innerHTML= "<i class='fas fa-sun fa-10x'> </i>";
-            }
-            else if(tempMood=="Clouds")
-            temp_type_image.innerHTML= "<i class='fas fa-cloud fa-10x'></i>";
-            else if(tempMood=="Rain")
-            temp_type_image.innerHTML= "<i class='fas fa-cloud-rain fa-10x'></i>";
-            else
-            temp_type_image.innerHTML= "<i class='fas fa-sun fa-10x'></i>";
+            // citydisplayhere.innerText=`${arrayData[0].name}, ${arrayData[0].sys.country}`;
+            // const tempMood=arrayData[0].weather[0].main;
+            // //console.log(tempMood);
+            // if(tempMood=="Clear")
+            // {
+            //     temp_type_image.innerHTML= "<i class='fas fa-sun fa-10x'> </i>";
+            // }
+            // else if(tempMood=="Clouds")
+            // temp_type_image.innerHTML= "<i class='fas fa-cloud fa-10x'></i>";
+            // else if(tempMood=="Rain")
+            // temp_type_image.innerHTML= "<i class='fas fa-cloud-rain fa-10x'></i>";
+            // else
+            // temp_type_image.innerHTML= "<i class='fas fa-sun fa-10x'></i>";
 
-            const min=document.getElementById("Min");
-            min.innerText= arrayData[0].main.temp_min;
-            //min.innerText="hello";
-            const max=document.getElementById("Max");
-            max.innerText= arrayData[0].main.temp_max;
-            const feels_like=document.getElementById("feels_like");
-            feels_like.innerText= arrayData[0].main.feels_like;
-            const humidity=document.getElementById("humidity");
-            humidity.innerText= arrayData[0].main.humidity;
-            const visibility=document.getElementById("visibility");
-            visibility.innerText= arrayData[0].visibility/1000;
+            // const min=document.getElementById("Min");
+            // min.innerText= arrayData[0].main.temp_min;
+            // //min.innerText="hello";
+            // const max=document.getElementById("Max");
+            // max.innerText= arrayData[0].main.temp_max;
+            // const feels_like=document.getElementById("feels_like");
+            // feels_like.innerText= arrayData[0].main.feels_like;
+            // const humidity=document.getElementById("humidity");
+            // humidity.innerText= arrayData[0].main.humidity;
+            // const visibility=document.getElementById("visibility");
+            // visibility.innerText= arrayData[0].visibility/1000;
 
 
 
