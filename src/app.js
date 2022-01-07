@@ -34,13 +34,13 @@ app.get("/weather", (req, res)=>
 {
      res.render("Weather");
 })
-app.get("*", (req, res)=>
-{
-console.log("errorpage");
-     res.render("404error.hbs", {
-          errorMsg:"Opps! Page not found",
-     });
-})
+// app.get("*", (req, res)=>
+// {
+// // console.log("errorpage");
+//      res.render("404error.hbs", {
+//           errorMsg:"Opps! Page not found",
+//      });
+// })
 
 
 
