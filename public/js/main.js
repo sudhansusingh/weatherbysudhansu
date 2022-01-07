@@ -20,7 +20,7 @@ const getinfo = async (event) => {
     else {
         try {
             //alert("here");
-            var url = `http://api.openweathermap.org/data/2.5/weather?q=${cityval}&units=metric&appid=d5ab202e7fa81eb3deb114ccc74aabbd`;
+            var url = `https://api.openweathermap.org/data/2.5/weather?q=${cityval}&units=metric&appid=d5ab202e7fa81eb3deb114ccc74aabbd`;
             //console.log(url);
             const response = await fetch(url);
             //const response= await fetch(`http://api.openweathermap.org/data/2.5/weather?q=goa&units=metric&appid=d5ab202e7fa81eb3deb114ccc74aabbd`);
