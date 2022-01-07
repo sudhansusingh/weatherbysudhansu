@@ -29,7 +29,7 @@ const getinfo = async (event) => {
             temp.innerText = arrayData[0].main.temp;
             //temp_type_image.innerText= arrayData[0].weather[0].main;
 
-            citydisplayhere.innerText=`${arrayData[0].name}, ${arrayData[0].sys.country}`
+            citydisplayhere.innerText=`${arrayData[0].name}, ${arrayData[0].sys.country}`;
             const tempMood=arrayData[0].weather[0].main;
             //console.log(tempMood);
             if(tempMood=="Clear")
